@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"net"
 	"os"
-	"p2p/ShareLogic"
 	"p2p/Utility"
 	"strings"
 )
@@ -36,12 +35,16 @@ func init() {
 }
 
 func main() {
-	ShareLogic.DisplayCoord()
-	node := NewNode(os.Args[1])
-	if node == nil {
-		panic("Invalid address format. Use IPv4:Port.")
-	}
-	node.Run(handleServer, handleClient)
+	// ShareLogic.DisplayCoord()
+	// node := NewNode(os.Args[1])
+	// if node == nil {
+	// 	panic("Invalid address format. Use IPv4:Port.")
+	// }
+	// node.Run(handleServer, handleClient)
+	var example Utility.Vertex
+	example.X = 1
+	// example.y = 1
+	fmt.Printf("%d", example.X)
 }
 
 func NewNode(address string) *Node {
